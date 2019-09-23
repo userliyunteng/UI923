@@ -1,0 +1,54 @@
+2019-09-18 14:25:15.426 | INFO     | public.common.mytest:setUp:17 - ############################### START ###############################
+2019-09-18 14:25:17.721 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Start a new browser: Chrome, Spend 2.293813467025757 seconds
+2019-09-18 14:25:18.843 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Set browser window maximized, Spend 1.1214215755462646 seconds
+2019-09-18 14:25:19.549 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Navigated to http://10.0.10.7/#/login, Spend 0.7055938243865967 seconds
+2019-09-18 14:25:19.550 | INFO     | public.common.mytest:setUp:21 - 打开http://10.0.10.7/#/login
+2019-09-18 14:25:19.861 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='邮箱号']> content: admin@jimi123.com, Spend 0.3108227252960205 seconds
+2019-09-18 14:25:19.976 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='密码']> content: jimi123, Spend 0.11393284797668457 seconds
+2019-09-18 14:25:20.059 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->el-button>, Spend 0.08295369148254395 seconds
+2019-09-18 14:25:22.219 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get element text element: <class->user-name>, Spend 2.159907579421997 seconds
+2019-09-18 14:25:22.238 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get current window url, Spend 0.017990589141845703 seconds
+2019-09-18 14:25:24.372 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Closed all window and quit the driver, Spend 2.133082628250122 seconds
+2019-09-18 14:25:24.373 | INFO     | public.common.mytest:tearDown:25 - ###############################  End  ###############################
+2019-09-18 14:25:24.375 | INFO     | public.common.mytest:setUp:30 - ############################### START ###############################
+2019-09-18 14:25:26.512 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Start a new browser: Chrome, Spend 2.136970281600952 seconds
+2019-09-18 14:25:27.639 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Set browser window maximized, Spend 1.1264984607696533 seconds
+2019-09-18 14:25:28.399 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Navigated to http://10.0.10.7/#/login, Spend 0.7585582733154297 seconds
+2019-09-18 14:25:28.399 | INFO     | public.common.mytest:setUp:34 - 打开http://10.0.10.7/#/login
+2019-09-18 14:25:28.717 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='邮箱号']> content: admin@jimi123.com, Spend 0.316819429397583 seconds
+2019-09-18 14:25:28.842 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='密码']> content: jimi123, Spend 0.12393045425415039 seconds
+2019-09-18 14:25:28.907 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->el-button>, Spend 0.0639650821685791 seconds
+2019-09-18 14:25:31.102 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->close>, Spend 2.194088935852051 seconds
+2019-09-18 14:25:31.184 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <css->button.el-button--danger>, Spend 0.08196282386779785 seconds
+2019-09-18 14:26:01.950 | INFO     | public.common.pyselenium:my_print:74 - FAIL    Unable to get element text element: <class->name>, Spend 30.766433238983154 seconds
+2019-09-18 14:26:02.221 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get the current window screenshot,path: D:\workhome\project\uitest\img\test_workbench.TestLogin.test_loginout_20190918142601_NG.png, Spend 0.26981306076049805 seconds
+2019-09-18 14:26:04.323 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Closed all window and quit the driver, Spend 2.1012516021728516 seconds
+2019-09-18 14:26:04.324 | INFO     | public.common.mytest:tearDown:40 - ###############################  End  ###############################
+2019-09-18 14:26:10.497 | INFO     | public.common.sendmail:send:84 - 发送邮件成功
+2019-09-18 14:34:49.733 | INFO     | public.common.mytest:setUp:17 - ############################### START ###############################
+2019-09-18 14:34:51.837 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Start a new browser: Chrome, Spend 2.1039130687713623 seconds
+2019-09-18 14:34:52.948 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Set browser window maximized, Spend 1.1114294528961182 seconds
+2019-09-18 14:34:53.621 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Navigated to http://10.0.10.7/#/login, Spend 0.6716172695159912 seconds
+2019-09-18 14:34:53.621 | INFO     | public.common.mytest:setUp:21 - 打开http://10.0.10.7/#/login
+2019-09-18 14:34:53.927 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='邮箱号']> content: admin@jimi123.com, Spend 0.30582714080810547 seconds
+2019-09-18 14:34:54.043 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='密码']> content: jimi123, Spend 0.11693072319030762 seconds
+2019-09-18 14:34:54.117 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->el-button>, Spend 0.07295751571655273 seconds
+2019-09-18 14:34:56.191 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get element text element: <class->user-name>, Spend 2.0738770961761475 seconds
+2019-09-18 14:34:56.196 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get current window url, Spend 0.004997730255126953 seconds
+2019-09-18 14:34:58.318 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Closed all window and quit the driver, Spend 2.1219875812530518 seconds
+2019-09-18 14:34:58.318 | INFO     | public.common.mytest:tearDown:25 - ###############################  End  ###############################
+2019-09-18 14:34:58.319 | INFO     | public.common.mytest:setUp:30 - ############################### START ###############################
+2019-09-18 14:35:00.409 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Start a new browser: Chrome, Spend 2.0900635719299316 seconds
+2019-09-18 14:35:01.530 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Set browser window maximized, Spend 1.1193747520446777 seconds
+2019-09-18 14:35:02.317 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Navigated to http://10.0.10.7/#/login, Spend 0.7865173816680908 seconds
+2019-09-18 14:35:02.318 | INFO     | public.common.mytest:setUp:34 - 打开http://10.0.10.7/#/login
+2019-09-18 14:35:02.702 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='邮箱号']> content: admin@jimi123.com, Spend 0.3827803134918213 seconds
+2019-09-18 14:35:02.818 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clear and type element: <css->[placeholder='密码']> content: jimi123, Spend 0.11593508720397949 seconds
+2019-09-18 14:35:02.901 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->el-button>, Spend 0.08295178413391113 seconds
+2019-09-18 14:35:05.061 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <class->close>, Spend 2.1588692665100098 seconds
+2019-09-18 14:35:05.139 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Clicked element: <css->.el-button.el-button--danger.el-button--small>, Spend 0.07695436477661133 seconds
+2019-09-18 14:35:05.177 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get element text element: <class->name>, Spend 0.036978960037231445 seconds
+2019-09-18 14:35:05.182 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Get current window url, Spend 0.0039980411529541016 seconds
+2019-09-18 14:35:07.295 | INFO     | public.common.pyselenium:my_print:74 - SUCCESS    Closed all window and quit the driver, Spend 2.1128973960876465 seconds
+2019-09-18 14:35:07.296 | INFO     | public.common.mytest:tearDown:40 - ###############################  End  ###############################
+2019-09-18 14:35:12.914 | INFO     | public.common.sendmail:send:84 - 发送邮件成功
