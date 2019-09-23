@@ -5,36 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a88ba1e1-dc39-4146-88b1-2ff25f55d841" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_login.TestLogin.test_01_login_1_20190912152627_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_login.TestLogin.test_01_login_1_20190919170651_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_login.TestLogin.test_01_login_1_20190919170911_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_loginout_1_20190919170932_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_loginout_1_20190919172519_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_loginout_20190912152646_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_loginout_20190912152929_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_loginout_20190918142601_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/test_workbench.TestLogin.test_luandian_20190919174938_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/testcase.test_workbench.TestWorkbench.test_luandian_20190919181358_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/testcase.test_workbench.TestWorkbench.test_luandian_20190919181618_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/testcase.test_workbench.TestWorkbench.test_luandian_20190919182018_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/testcase.test_workbench.TestWorkbench.test_luandian_20190919182729_NG.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-12_15_26_19.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-12_15_28_44.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-12_15_36_49.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-18_14_34_49.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_09_02_39.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_06_07.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_08_55.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_23_30.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_24_27.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_27_46.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_17_48_37.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-19_18_33_14.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/html_report/TestResult2019-09-20_09_06_47.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/log/test_2019-09-12.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/log/test_2019-09-18.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/log/test_2019-09-19.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/log/test_2019-09-20.log" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,16 +44,6 @@
               <folding>
                 <element signature="e#15#30#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPage.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/pages/LoginPage.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,11 +118,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="496">
               <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic_config.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/basic_config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -217,7 +187,6 @@
         <option value="$PROJECT_DIR$/public/common/pyselenium.py" />
         <option value="$PROJECT_DIR$/public/common/mongo_utils.py" />
         <option value="$PROJECT_DIR$/../../python/Lib/HTMLTestRunner.py" />
-        <option value="$PROJECT_DIR$/config/basic_config.py" />
         <option value="$PROJECT_DIR$/public/pages/LoginPage.py" />
         <option value="$PROJECT_DIR$/testcase/test_login.py" />
         <option value="$PROJECT_DIR$/config/globalparam.py" />
@@ -228,6 +197,7 @@
         <option value="$PROJECT_DIR$/testcase/test_workbench.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/config/basic_config.py" />
       </list>
     </option>
   </component>
@@ -717,6 +687,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/basic_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/globalparam.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -1043,6 +1007,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
           <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/basic_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
