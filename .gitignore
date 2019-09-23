@@ -1,0 +1,18 @@
+*.pyc
+*.md
+
+report/html_report/*.html
+
+
+report/log/*.log
+
+
+config/basic_config.py
+
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.xml
+*.iml
