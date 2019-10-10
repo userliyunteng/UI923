@@ -15,7 +15,7 @@ from tomorrow import threads
 import HTMLTestRunner_gu
 
 
-path = os.path.join(os.path.abspath('.'),'report', 'log','test_{}.log'.format(time.strftime('%Y-%m-%d')))
+path = os.path.join(os.path.abspath('.'),'report', 'logs','test_{}.logs'.format(time.strftime('%Y-%m-%d')))
 logger.add(path)  # 日志初始化
 
 def run(method, test=None):
