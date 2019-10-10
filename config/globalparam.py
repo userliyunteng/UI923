@@ -14,10 +14,10 @@ import time
 project_path = os.path.abspath('.')
 # 日志路径
 log_path = os.path.join(project_path,'report', 'log','test_{}.log'.format(time.strftime('%Y-%m-%d')))
-# 截图文件路径
-img_path = os.path.join(project_path,'img')
 # 测试报告路径
 report_path = os.path.join(project_path, 'report', 'html_report')
+# 截图文件路径
+img_path = os.path.join(report_path,'images')
 # 默认浏览器
 browser = 'Chrome'
 # 是否开启静默模式,只有在chrome下支持开启

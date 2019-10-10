@@ -31,7 +31,12 @@ class SendMail:
         """获取最新测试报告"""
         dirs = os.listdir(reportPath)
         dirs.sort()
-        newreportname = dirs[-1]
+        dirs_html = []
+        for filename in dirs:
+            file, suffix = os.path.splitext(filename)
+            if suffix == '.html':
+                dirs_html.append(filename)
+        newreportname = dirs_html[-1]
         print('The new report name: {0}'.format(newreportname))
         return newreportname
 

@@ -31,6 +31,7 @@ class PySelenium(object):
         t1 = time.time()
         chrome_options = Options()
         chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
         self.headless = headless
         dc = {'platform': 'ANY', 'browserName': 'chrome', 'version': '', 'javascriptEnabled': True}
         dr = None
@@ -113,7 +114,6 @@ class PySelenium(object):
         """
         if "->" not in css:
             raise NameError("Positioning syntax errors, lack of '->'.")
-
         by = css.split("->")[0].strip()
         value = css.split("->")[1].strip()
 
@@ -374,6 +374,11 @@ class PySelenium(object):
     def release_btn(self):
         ActionChains(self.driver).release().perform()
 
+    def scrolling_scroll(self):
+        """拖动滚动条到页面底部"""
+        js = "var q=document.documentElement.scrollTop=10000"
+        self.js(js)
+
     def click_text(self, text):
         """
         Click the element by the link text
@@ -470,6 +475,7 @@ class PySelenium(object):
         """
         t1 = time.time()
         try:
+            self.element_wait(css)
             el = self.get_element(css)
             attr = el.get_attribute(attribute)
             self.my_print("{0} Get attribute element: <{1}>,attribute: {2}, Spend {3} seconds".format(success,
@@ -644,6 +650,25 @@ class PySelenium(object):
         t1 = time.time()
         try:
             self.driver.get_screenshot_as_file(file_path)
+            self.my_print("{0} Get the current window screenshot,path: {1}, Spend {2} seconds".format(success,
+                                                                                                      file_path,
+                                                                                                      time.time() - t1))
+        except Exception:
+            self.my_print("{0} Unable to get the current window screenshot,path: {1}, Spend {2} seconds".format(fail,
+                                                                                                                file_path,
+                                                                                                                time.time() - t1))
+            raise
+
+    def take_screenshot_base64(self):
+        """
+        Get the current window screenshot.
+
+        Usage:
+        driver.take_screenshot('c:/test.png')
+        """
+        t1 = time.time()
+        try:
+            self.driver.get_screenshot_as_base64()
             self.my_print("{0} Get the current window screenshot,path: {1}, Spend {2} seconds".format(success,
                                                                                                       file_path,
                                                                                                       time.time() - t1))

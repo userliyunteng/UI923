@@ -8,14 +8,17 @@ from ddt import ddt,data,unpack
 from loguru import logger
 from public.common.datainfo import get_test_case_data, data_info
 from public.common.get_img import screenshot_about_case
+from public.pages.LoginPage import Login
 
 
 @ddt
-class TestWorkbench(mytest.MyAutologinTest):
+class TestWorkbench(mytest.MyTest):
     """工作台模块"""
     @screenshot_about_case
     @data(*get_test_case_data(data_info, 'test_loginout'))
     def test_loginout(self, data):
+        """退出登陆"""
+        self.workbench = Login(self.dr).login('281878321@qq.com', 'q5310543')
         test_assert = data['assertion']
         self.workbench.close()
         loginpage = self.workbench.click_out()
@@ -24,17 +27,10 @@ class TestWorkbench(mytest.MyAutologinTest):
         self.assertIn(text, test_assert['text'])
         self.assertIn(url, test_assert['url'])
 
-    @screenshot_about_case
-    def test_luandian(self):
-        menus = {
-            "平台管理": 1,
-            "协议管理": 2,
-            "机型管理": 3,
-            "设备管理": 4,
-            "客户管理": 5,
-            "用户管理": 6,
-            "权限管理": 7
-        }
-        for key, v in menus.items():
-            self.workbench.click_menu(v)
-            time.sleep(5)
+    # @screenshot_about_case
+    # def test_luandian(self):
+    #     """点击左侧菜单"""
+    #     menu = ['客户管理', '平台管理', '机型管理', '权限管理', '协议管理', '设备管理', '用户管理']
+    #     for i in menu:
+    #         self.workbench.click_menu(i)
+    #         time.sleep(3)

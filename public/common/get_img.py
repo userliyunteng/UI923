@@ -6,6 +6,12 @@ from functools import wraps
 from config.basic_config import ConfigInit
 from config import globalparam
 from loguru import logger
+from requests import request
+from qiniu import Auth, put_file, etag
+import qiniu.config
+
+access_key = ConfigInit.AccessKey
+secret_key = ConfigInit.SecretKey
 
 """
 此模块用于屏幕截图
@@ -29,10 +35,29 @@ def screenshot_about_case(func):
             # 获得现在的时间戳
             time_now = datetime.now().strftime('%Y%m%d%H%M%S')
             # 名字的一部分
-            screen_shot_name = "NG.png"
+            screen_shot_name = ".png"
             # 组装图片需要传入的路径和推片名称
             screen_img = screenshotPath + '_' + time_now + '_' + screen_shot_name
+            img_name = case_name + '_' + time_now + screen_shot_name
             # 截图并保存到相应的名称的路径
             self.dr.take_screenshot(screen_img)
+            img_url = upload_img(screen_img, img_name)
+            print('screenshot:', img_url)
             raise e
     return get_screenshot_about_case
+
+def upload_img(screenshotpath, img_name):
+    q = Auth(access_key, secret_key)
+    bucket_name = ConfigInit.qiniu_house
+    # 上传后保存的文件名
+    key = img_name
+    # 生成上传 Token，可以指定过期时间等
+    token = q.upload_token(bucket_name, key, 3600)
+    # 要上传文件的本地路径
+    localfile = screenshotpath
+    try:
+        put_file(token, key, localfile)
+        logger.info('上传图片成功')
+        return ConfigInit.qiniu_domain + img_name
+    except Exception as e:
+        logger.info('上传图片失败', e)

@@ -1,6 +1,12 @@
 class ConfigInit:
-    url = 'youurl'
-    sendaddr_name = 'youstmpname'
-    sendaddr_pswd = 'youstmppw'
+    url = 'url'
+    sendaddr_name = 'name'
+    sendaddr_pswd = 'paswd'
     data_filename = 'login.xls'
-    #测试测试
+    mongo_user = 'root'
+    mongo_pw = 'pw'
+    mongo_ip = 'ip:27017'
+    AccessKey = 'qiniukey'
+    SecretKey = 'qiniukey'
+    qiniu_domain = 'qiniudomain'
+    qiniu_house = 'jimi-imags'

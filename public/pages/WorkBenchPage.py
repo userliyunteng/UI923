@@ -1,6 +1,8 @@
 #coding=utf-8
+import time
 from public.common import basepage
-from public.pages import LoginPage
+from public.pages import LoginPage, CustomerPage
+
 
 class WorkBench(basepage.Page):
     """工作台模块"""
@@ -24,6 +26,11 @@ class WorkBench(basepage.Page):
 
         return LoginPage.Login(self.dr)
 
-    def click_menu(self, index):
+    def click_menu(self, menu):
         """点击左侧菜单"""
-        self.dr.click("css->ul[role=menubar]>li:nth-child({})".format(index))
+        self.dr.click("xpath->//span[text()='{}' and @class='menu-title']/..".format(menu))
+        # self.dr.click("css->ul[role=menubar]>div:nth-child({})".format(menus[menu]))
+        time.sleep(1.5)
+
+    def return_customer(self):
+        return CustomerPage.Customer(self.dr)
