@@ -28,10 +28,12 @@ class MongoModel:
         ser = {
             "phone": phone
         }
-        t_organization_account.delete_one(ser)
-        logger.info('删除 t_organization_account 表记录 {} 成功'.format(ser))
-        t_organization_info.delete_one(ser)
-        logger.info('删除 t_organization_info 表记录 {} 成功'.format(ser))
+        rs = t_organization_account.delete_many(ser)
+        rsinfo = t_organization_info.delete_many(ser)
+        if rs.deleted_count != 0 and rsinfo.deleted_count != 0:
+            logger.info('删除 {} 记录 {} 成功'.format(phone, ser))
+
+
 
 if __name__ == '__main__':
     MongoModel().delete_customer('13800138011')

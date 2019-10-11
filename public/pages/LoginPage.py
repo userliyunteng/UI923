@@ -6,19 +6,6 @@ from public.pages.WorkBenchPage import WorkBench
 class Login(basepage.Page):
     """登录页面"""
 
-    def input_v(self):
-        self.dr.clear_type("id->kw", '自动化测试')
-
-    def click_btn(self):
-        self.dr.click("id->su")
-
-    def click_one(self):
-        # self.dr.click("xpath->//div[@id='content_left']/div[1]/div/h3/a")
-        self.dr.click("css->div#content_left>div:nth-child(1)>div:nth-child(1)>h3>a")
-
-    def into_newwin(self):
-        self.dr.into_new_window()
-
     def input_account(self, account):
         """输入账号"""
         self.dr.clear_type("css->[placeholder='请输入登录账号/邮箱/手机号码']", account)

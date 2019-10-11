@@ -32,6 +32,7 @@ class PySelenium(object):
         chrome_options = Options()
         chrome_options.add_argument('--headless')
         chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument('--window-size=1200x855')
         self.headless = headless
         dc = {'platform': 'ANY', 'browserName': 'chrome', 'version': '', 'javascriptEnabled': True}
         dr = None

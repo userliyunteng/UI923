@@ -19,6 +19,7 @@ class WorkBench(basepage.Page):
     def close(self):
         """关闭按钮"""
         self.dr.click("class->close")
+        time.sleep(0.3)
 
     def click_out(self):
         """确定退出"""

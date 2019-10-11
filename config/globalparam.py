@@ -13,7 +13,7 @@ import time
 #项目路径
 project_path = os.path.abspath('.')
 # 日志路径
-log_path = os.path.join(project_path,'report', 'logs','test_{}.logs'.format(time.strftime('%Y-%m-%d')))
+log_path = os.path.join(project_path,'report', 'logs','test_{}.log'.format(time.strftime('%Y-%m-%d')))
 # 测试报告路径
 report_path = os.path.join(project_path, 'report', 'html_report')
 # 截图文件路径

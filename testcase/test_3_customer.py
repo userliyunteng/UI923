@@ -37,4 +37,4 @@ class TestCustomer(mytest.MyTest):
         customer.input_address('这是详细地址')
         customer.click_determine()
         company = customer.get_customer_text()
-        self.assertEqual('中国电信', company)
+        self.assertEqual('中国1电信', company)
