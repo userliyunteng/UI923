@@ -18,9 +18,10 @@ class TestCustomer(mytest.MyTest):
     @screenshot_about_case
     def test_addcustomer(self):
         """新增客户"""
-        self.workbench = Login(self.dr).login('281878321@qq.com', 'q5310543')
-        self.workbench.click_menu('客户管理')
-        customer = self.workbench.return_customer()
+        workbench = Login(self.dr).login('281878321@qq.com', 'q5310543')
+        workbench.exist_loading()
+        workbench.click_menu('客户管理')
+        customer = workbench.return_customer()
         customer.click_add()
         customer.input_company('中国电信')
         customer.input_contact('谷志军')
@@ -29,7 +30,7 @@ class TestCustomer(mytest.MyTest):
         customer.input_account('ui927')
         customer.input_pw('q5310543')
         customer.input_pw_two('q5310543')
-        customer.select_platform_type('所属平台', '中怡康汽车在线')
+        customer.select_platform_type('所属平台', '云车智行')
         customer.select_platform_type('所属类型', '代理商')
         customer.select_position(1, '广东省')
         customer.select_position(2, '深圳')

@@ -18,10 +18,11 @@ class TestWorkbench(mytest.MyTest):
     @data(*get_test_case_data(data_info, 'test_loginout'))
     def test_loginout(self, data):
         """退出登陆"""
-        self.workbench = Login(self.dr).login('281878321@qq.com', 'q5310543')
+        workbench = Login(self.dr).login('281878321@qq.com', 'q5310543')
         test_assert = data['assertion']
-        self.workbench.close()
-        loginpage = self.workbench.click_out()
+        workbench.exist_loading()
+        workbench.close()
+        loginpage = workbench.click_out()
         text = loginpage.get_title()
         url = loginpage.get_url()
         self.assertIn(text, test_assert['text'])

@@ -1,7 +1,7 @@
 #coding=utf-8
 import time
 from public.common import basepage
-from public.pages import LoginPage, CustomerPage
+from public.pages import LoginPage, CustomerPage, TaskLogPage
 
 
 class WorkBench(basepage.Page):
@@ -32,6 +32,14 @@ class WorkBench(basepage.Page):
         self.dr.click("xpath->//span[text()='{}' and @class='menu-title']/..".format(menu))
         # self.dr.click("css->ul[role=menubar]>div:nth-child({})".format(menus[menu]))
         time.sleep(1.5)
+
+    def click_menu_child(self, child):
+        """点击子菜单"""
+        self.dr.click("xpath->//div[text()='{}']/../..".format(child))
+        time.sleep(1)
+
+    def return_task_log_page(self):
+        return TaskLogPage.TaskLog(self.dr)
 
     def return_customer(self):
         return CustomerPage.Customer(self.dr)

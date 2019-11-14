@@ -32,7 +32,7 @@ class SendMail:
         dirs = os.listdir(reportPath)
         dirs.sort()
         dirs_html = []
-        for filename in dirs:
+        for filename in dirs:  # 找到文件夹中后缀为.html的最新的那个文件
             file, suffix = os.path.splitext(filename)
             if suffix == '.html':
                 dirs_html.append(filename)

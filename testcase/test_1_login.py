@@ -1,3 +1,4 @@
+#coding=utf-8
 import time
 import unittest
 
@@ -22,6 +23,7 @@ class TestLogin(mytest.MyTest):
         test_assert = data['assertion']
         login = LoginPage.Login(self.dr)
         ele = login.login(test_data['username'],test_data['pw'])
+        login.exist_loading()
         username = ele.get_name()
         url = ele.get_url()
         self.assertIn(url,test_assert['title'])

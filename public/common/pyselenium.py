@@ -641,6 +641,7 @@ class PySelenium(object):
             self.my_print("{0} Element: <{1}> is not exist, Spend {2} seconds".format(fail, css, time.time() - t1))
             return False
 
+
     def take_screenshot(self, file_path):
         """
         Get the current window screenshot.
@@ -660,7 +661,7 @@ class PySelenium(object):
                                                                                                                 time.time() - t1))
             raise
 
-    def take_screenshot_base64(self):
+    def take_screenshot_base64(self, file_path):
         """
         Get the current window screenshot.
 
@@ -726,6 +727,23 @@ class PySelenium(object):
                 "{0} Unable element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".
                     format(fail, css, text, secs, time.time() - t1))
             raise
+
+    def keyboard_operating(self, css, key, text):
+        t1 = time.time()
+        try:
+            self.element_wait(css)
+            ele = self.get_element(css)
+            ele.send_keys(Keys.ENTER)
+            self.my_print(
+                "{0} Element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".format(
+                    success, css, text, secs, time.time() - t1))
+        except Exception:
+            self.my_print(
+                "{0} Unable element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".
+                    format(fail, css, text, secs, time.time() - t1))
+            raise
+
+
 
     def js_click(self, css):
         """

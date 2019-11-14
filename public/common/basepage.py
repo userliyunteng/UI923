@@ -1,3 +1,5 @@
+#coding=utf-8
+import time
 
 class Page(object):
     """
@@ -6,3 +8,14 @@ class Page(object):
 
     def __init__(self, selenium_driver):
         self.dr = selenium_driver
+
+    def exist_loading(self):
+        """等待全局loading消失"""
+        while True:
+            result = self.dr.element_exist('css->.loading-mask')
+            if result:
+                time.sleep(1.5)
+            else:
+                break
+
+

@@ -19,10 +19,9 @@ def get_excel_dict(path, index=0):
         for caseData in list:
             dict[firstRowDataList[list.index(caseData)]] =caseData #每一行数据与第一行数据对应转为字典
             #json.dumps(json.loads(caseData), ensure_ascii=False)
-        dictTestCaseName[list[0]]=dict#转为字典后与用例名字对应转为字典
+        dictTestCaseName[list[0]] = dict#转为字典后与用例名字对应转为字典
         paralList.append(dictTestCaseName)#将处理后的数据放入列表里
     return (paralList)
-
 
 def get_test_case_data(data_info,testCaseName):
     testData = data_info
