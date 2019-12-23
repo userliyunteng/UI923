@@ -728,19 +728,21 @@ class PySelenium(object):
                     format(fail, css, text, secs, time.time() - t1))
             raise
 
-    def keyboard_operating(self, css, key, text):
-        t1 = time.time()
+    def keyboard_operating(self, css, key, text=''):
+        if not (isinstance(text, str) and isinstance(key, str)):
+            self.my_print('参数类型错误')
+            return
         try:
             self.element_wait(css)
             ele = self.get_element(css)
-            ele.send_keys(Keys.ENTER)
-            self.my_print(
-                "{0} Element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".format(
-                    success, css, text, secs, time.time() - t1))
+            if hasattr(Keys, key):
+                func = getattr(Keys, key)
+                ele.send_keys(func, text)
+                self.my_print('操作键盘键{} {}成功'.format(key, text))
+            else:
+                self.my_print('{}方法不存在'.format(key))
         except Exception:
-            self.my_print(
-                "{0} Unable element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".
-                    format(fail, css, text, secs, time.time() - t1))
+            self.my_print('操作键盘键{} {} 失败'.format(key, text))
             raise
 
 

@@ -39,6 +39,7 @@ def screenshot_about_case(func):
             # 组装图片需要传入的路径和推片名称
             screen_img = screenshotPath + '_' + time_now + '_' + screen_shot_name
             img_name = case_name + '_' + time_now + screen_shot_name
+            logger.info(img_name)
             # 截图并保存到相应的名称的路径
             self.dr.take_screenshot(screen_img)
             img_url = upload_img(screen_img, img_name)
@@ -56,8 +57,8 @@ def upload_img(screenshotpath, img_name):
     # 要上传文件的本地路径
     localfile = screenshotpath
     try:
-        put_file(token, key, localfile)
-        logger.info('上传图片成功')
-        return ConfigInit.qiniu_domain + img_name
+        r = put_file(token, key, localfile)
+        logger.info('上传图片成功---{}'.format(r))
+        return ConfigInit.qiniu_domain + key
     except Exception as e:
         logger.info('上传图片失败', e)

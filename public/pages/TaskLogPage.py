@@ -19,7 +19,9 @@ class TaskLog(basepage.Page):
             select_left('right', '1')
         """
         dates = self.dr.get_elements(
-            "xpath->//div[@class='el-picker-panel__content el-date-range-picker__content is-{}']/table/tbody/tr[@class='el-date-table__row']/td[contains(@class, 'available')]".format(
+            "xpath->//div[@class='el-picker-panel__content "
+            "el-date-range-picker__content is-{}']/table/tbody/tr"
+            "[@class='el-date-table__row']/td[contains(@class, 'available')]".format(
                 position))
         for i in dates:
             number = i.find_element_by_css_selector('div>span')
