@@ -19,15 +19,16 @@ class TestLogin(mytest.MyTest):
     @data(*get_test_case_data(data_info, 'test_01_login'))
     def test_01_login(self, data):
         """正常登录"""
+        login = LoginPage.Login(self.dr)
         test_data = data['data']
         test_assert = data['assertion']
-        login = LoginPage.Login(self.dr)
-        ele = login.login(test_data['username'],test_data['pw'])
+        ele = login.login(test_data['username'], test_data['pw'], test_data['platform'])
         login.exist_loading()
         username = ele.get_name()
         url = ele.get_url()
         self.assertIn(url,test_assert['title'])
-        self.assertIn(username, test_assert['username'])
+        self.assertIn(test_assert['username'], username)
+        self.assertIn('2222', '21222')
 
 
 

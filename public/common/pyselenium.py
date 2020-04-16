@@ -93,6 +93,8 @@ class PySelenium(object):
             WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.ID, value)), messages)
         elif by == "name":
             WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.NAME, value)), messages)
+        elif by == "tag_name":
+            WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.TAG_NAME, value)), messages)
         elif by == "class":
             WebDriverWait(self.driver, secs, 1).until(EC.presence_of_element_located((By.CLASS_NAME, value)), messages)
         elif by == "link_text":
@@ -122,6 +124,8 @@ class PySelenium(object):
             element = self.driver.find_element_by_id(value)
         elif by == "name":
             element = self.driver.find_element_by_name(value)
+        elif by == "tag_name":
+            element = self.driver.find_element_by_tag_name(value)
         elif by == "class":
             element = self.driver.find_element_by_class_name(value)
         elif by == "link_text":
@@ -703,6 +707,19 @@ class PySelenium(object):
                                                                                                          time.time() - t1))
         except Exception:
             self.my_print("{0} Unable switch to the new window, Spend {1} seconds".format(fail, time.time() - t1))
+            raise
+
+    def send_key_text(self,css,text,secs=0.5):
+        t1 = time.time()
+        try:
+            self.element_wait(css)
+            ele = self.get_element(css)
+            ele.send_keys(text)
+            time.sleep(secs)
+        except Exception:
+            self.my_print(
+                "{0} Unable element <{1}> type content: {2},and sleep {3} seconds,input ENTER key, Spend {4} seconds".
+                    format(fail, css, text, secs, time.time() - t1))
             raise
 
     def type_and_enter(self, css, text, secs=0.5):

@@ -1,6 +1,6 @@
 #coding=utf-8
 import unittest
-import HTMLTestRunner
+import HTMLTestRunner_gu
 import time
 import os
 from loguru import logger
@@ -9,9 +9,7 @@ from public.common import sendmail
 from testcase import test_1_login, test_2_workbench
 from public.common.mongo_utils import MongoModel
 # from BeautifulReport import BeautifulReport
-from HTMLTestRunner_cn import HTMLTestRunner_cn
-# from tomorrow import threads
-import HTMLTestRunner_gu
+
 
 
 path = os.path.join(os.path.abspath('.'),'report', 'logs','test_{}.log'.format(time.strftime('%Y-%m-%d')))
@@ -20,7 +18,7 @@ logger.add(path)  # 日志初始化
 def run(method, test=None):
     if method == 'all':
         test_dir = './testcase'
-        suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test_4*.py')
+        suite = unittest.defaultTestLoader.discover(start_dir=test_dir, pattern='test_5*.py')
 
         now = time.strftime('%Y-%m-%d_%H_%M_%S')
         reportname = os.path.join(globalparam.report_path, 'TestResult' + now + '.html')
@@ -34,8 +32,8 @@ def run(method, test=None):
         time.sleep(3)
         # 发送邮件
         # MongoModel().delete_customer('13800138011')
-        mail = sendmail.SendMail()
-        mail.send()
+        # mail = sendmail.SendMail()
+        # mail.send()
     if method == 'one':
         suit = unittest.TestSuite()
         suit.addTest(test)  # 把这个类中需要执行的测试用例加进去，有多条再加即可

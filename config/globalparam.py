@@ -21,7 +21,7 @@ img_path = os.path.join(report_path,'images')
 # 默认浏览器
 browser = 'Chrome'
 # 是否开启静默模式,只有在chrome下支持开启
-headless = False
+headless = True
 
 # 测试数据路径
 data_path = os.path.join(project_path, 'data', 'testdata')

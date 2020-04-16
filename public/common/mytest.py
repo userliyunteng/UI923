@@ -19,6 +19,7 @@ class MyTest(unittest.TestCase):
         self.dr.open(ConfigInit.url)
         logger.info('打开{}'.format(ConfigInit.url))
 
+
     def tearDown(self):
         self.dr.quit()
         logger.info('###############################  End  ###############################')
@@ -40,7 +41,7 @@ class MyAutologinTest(unittest.TestCase):
         self.dr.max_window()
         self.dr.open(ConfigInit.url)
         logger.info('打开{}'.format(ConfigInit.url))
-        self.workbench = Login(self.dr).login('281878321@qq.com','q5310543')
+        self.workbench = Login(self.dr).login('admin','jimi123', '业务平台')
 
     def tearDown(self):
         self.dr.quit()

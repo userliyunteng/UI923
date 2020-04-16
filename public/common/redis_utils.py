@@ -1,8 +1,8 @@
 # coding=utf-8
 import redis
 
-from config.config import ConfigInit
-from public.common.log import Log
+from config.basic_config import ConfigInit
+# from public.common.log import Log
 
 
 logger = Log()
